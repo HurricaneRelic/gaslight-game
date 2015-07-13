@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\TestCPPproj.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{1C964001-5882-48D5-BB03-286CF6BBC537}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\TestCPPproj.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\TestCPPprojEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{646549F2-BD12-4B69-B142-9AD4E503826F}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEditorUserSettings.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\TestCPPproj">
+			<UniqueIdentifier>{5EB4A862-B85B-4D4C-9362-BF5ED1AAB955}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\TestCPPproj\TestCPPproj.Build.cs">
+			<Filter>Source\TestCPPproj</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\TestCPPproj\TestCPPproj.cpp">
+			<Filter>Source\TestCPPproj</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\TestCPPproj\TestCPPproj.h">
+			<Filter>Source\TestCPPproj</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\TestCPPproj\TestCPPprojCharacter.cpp">
+			<Filter>Source\TestCPPproj</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\TestCPPproj\TestCPPprojCharacter.h">
+			<Filter>Source\TestCPPproj</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\TestCPPproj\TestCPPprojGameMode.cpp">
+			<Filter>Source\TestCPPproj</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\TestCPPproj\TestCPPprojGameMode.h">
+			<Filter>Source\TestCPPproj</Filter>
+		</ClInclude >
+		<Filter Include="Source\TestCPPproj\Resources">
+			<UniqueIdentifier>{F4F444AE-80F1-48F5-B153-BDC45820C25D}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Source\TestCPPproj\Resources\Windows">
+			<UniqueIdentifier>{E4F09965-87ED-4577-A70C-826476CF9428}</UniqueIdentifier>
+		</Filter>
+		<ResourceCompile Include="..\..\Source\TestCPPproj\Resources\Windows\TestCPPproj.rc">
+			<Filter>Source\TestCPPproj\Resources\Windows</Filter>
+		</ResourceCompile >
+	</ItemGroup>
+</Project>
