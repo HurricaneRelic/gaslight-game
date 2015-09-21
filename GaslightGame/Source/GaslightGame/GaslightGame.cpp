@@ -7,3 +7,6 @@ IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, GaslightGame, "GaslightGa
 
 DEFINE_LOG_CATEGORY(LogGaslightGame)
  
+DEFINE_LOG_CATEGORY(TargetingLog)
+
+DEFINE_LOG_CATEGORY(CritErrors)

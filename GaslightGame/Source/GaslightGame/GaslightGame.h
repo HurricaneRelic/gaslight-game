@@ -7,5 +7,8 @@
 
 DECLARE_LOG_CATEGORY_EXTERN(LogGaslightGame, Log, All);
 
+DECLARE_LOG_CATEGORY_EXTERN(TargetingLog, Log, All);
+
+DECLARE_LOG_CATEGORY_EXTERN(CritErrors, Log, All);
 
 #endif
