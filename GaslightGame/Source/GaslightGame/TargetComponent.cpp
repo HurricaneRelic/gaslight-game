@@ -29,7 +29,7 @@ UTargetComponent::UTargetComponent()
 void UTargetComponent::BeginPlay()
 {
 	Super::BeginPlay();
-
+	isTargetted = false;
 
 	//Adding a tag to every component with
 	GetOwner()->Tags.Add(FName(TEXT("Targetable")));
@@ -63,7 +63,7 @@ TArray<AActor*> UTargetComponent::GetTargets()
 
 	for (TObjectIterator<UTargetComponent> Itr; Itr; ++Itr)
 	{
-		if (Itr->GetOwner() != GetOwner())
+		if (!(Itr->GetOwner()->GetName().Equals(GetOwner()->GetName())))
 		{
 			//SCREENMSG(Itr->GetOwner()->GetName());
 			ActorList.Add(Itr->GetOwner());
@@ -95,7 +95,7 @@ bool UTargetComponent::SelectValidTarget()
 	{
 		//SCREENMSGF(FVector::DistSquared(me->GetActorLocation(), target->GetActorLocation()));
 		UE_LOG(TargetingLog, Warning, TEXT("Me: %s, Target: %s||Distance: %f"), *me->GetName(), *other->GetName(), FVector::DistSquared(me->GetActorLocation(), other->GetActorLocation()))
-		if (FVector::DistSquared(me->GetActorLocation(), other->GetActorLocation()) < 100)
+		if (FVector::DistSquared(me->GetActorLocation(), other->GetActorLocation()) < 1000000.0f)
 		{
 			FVector myFacing = me->GetActorForwardVector();
 			FVector targetVec = other->GetActorLocation() - me->GetActorLocation();
@@ -105,6 +105,7 @@ bool UTargetComponent::SelectValidTarget()
 
 			if (costheta < 0.707107f) //Within 45 degrees of us
 			{
+				UE_LOG(TargetingLog, Warning, TEXT("Found a valid Target"))
 				return true;
 			}
 		}
@@ -112,13 +113,38 @@ bool UTargetComponent::SelectValidTarget()
 	};
 
 	TArray<AActor*> validTargetList = FilterValidTargets(GetTargets(), filter);
-
 	if (validTargetList.Num() == 0)
+	{
+
 		return false;
 
-	Cast<UTargetComponent>(target)->UnsetAsTarget();
+	}
+	//Cast<UTargetComponent>(target)->UnsetAsTarget();
+	if (target)
+	{
+		TArray<UActorComponent*> components;
+		target->GetComponents(components);
+		for (int i = 0; i < components.Num(); ++i)
+		{
+			UTargetComponent* targetComp = Cast<UTargetComponent>(components[i]);
+			if (targetComp)
+			{
+				targetComp->UnsetAsTarget();
+			}
+		}
+	}
+	
+
 	FVector myLocation = GetOwner()->GetActorLocation();
-	float distsquare = FVector::DistSquared(target->GetActorLocation(), myLocation);
+	float distsquare;
+	if (target)
+	{
+		distsquare = FVector::DistSquared(target->GetActorLocation(), myLocation);
+	}
+	else
+	{
+		distsquare = 10000000;
+	}
 
 	for (auto iter(validTargetList.CreateIterator()); iter; ++iter)
 	{
@@ -130,13 +156,25 @@ bool UTargetComponent::SelectValidTarget()
 		}
 	}
 
-	Cast<UTargetComponent>(target)->SetAsTarget();
-	
+	//Cast<UTargetComponent>(target)->SetAsTarget();
+	{
+		TArray<UActorComponent*> components;
+		target->GetComponents(components);
+		for (int i = 0; i < components.Num(); ++i)
+		{
+			UTargetComponent* targetComp = Cast<UTargetComponent>(components[i]);
+			if (targetComp)
+			{
+				targetComp->SetAsTarget();
+			}
+		}
+	}
 	return true;
 }
 
 void UTargetComponent::SetAsTarget()
 {
+	SCREENMSG("Target Locked!");
 	isTargetted = true;
 }
 
