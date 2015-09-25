@@ -1,70 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\GaslightGame.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{8785A2A3-D93A-47F5-A5ED-1C6DF543A0AB}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\GaslightGame.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\GaslightGameEditor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{7B6706F8-804C-41B7-908F-802885C351FD}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultInput.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\GaslightGame">
-			<UniqueIdentifier>{44C18357-0968-4A05-983A-826B4469A1AF}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\GaslightGame\GaslightGame.Build.cs">
-			<Filter>Source\GaslightGame</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\GaslightGame\GaslightGame.cpp">
-			<Filter>Source\GaslightGame</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\GaslightGame\GaslightGame.h">
-			<Filter>Source\GaslightGame</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\GaslightGame\GaslightGameCharacter.cpp">
-			<Filter>Source\GaslightGame</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\GaslightGame\GaslightGameCharacter.h">
-			<Filter>Source\GaslightGame</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\GaslightGame\GaslightGameGameMode.cpp">
-			<Filter>Source\GaslightGame</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\GaslightGame\GaslightGameGameMode.h">
-			<Filter>Source\GaslightGame</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\GaslightGame\GaslightGamePlayerController.cpp">
-			<Filter>Source\GaslightGame</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\GaslightGame\GaslightGamePlayerController.h">
-			<Filter>Source\GaslightGame</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\GaslightGame\TargetComponent.cpp">
-			<Filter>Source\GaslightGame</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\GaslightGame\TargetComponent.h">
-			<Filter>Source\GaslightGame</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\GaslightGame.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{8CC2C196-007A-48F4-81AA-1CBD4B779F99}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GaslightGame.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\GaslightGameEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{7E68A82B-F5AA-438A-9226-1CEA38428D64}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\GaslightGame">
+      <UniqueIdentifier>{3F6AF33F-6547-4EEC-8F47-D8B20FB95EB1}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GaslightGame\GaslightGame.Build.cs">
+      <Filter>Source\GaslightGame</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\GaslightGame\GaslightGame.cpp">
+      <Filter>Source\GaslightGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GaslightGame\GaslightGame.h">
+      <Filter>Source\GaslightGame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GaslightGame\GaslightGameCharacter.cpp">
+      <Filter>Source\GaslightGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GaslightGame\GaslightGameCharacter.h">
+      <Filter>Source\GaslightGame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GaslightGame\GaslightGameGameMode.cpp">
+      <Filter>Source\GaslightGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GaslightGame\GaslightGameGameMode.h">
+      <Filter>Source\GaslightGame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GaslightGame\GaslightGamePlayerController.cpp">
+      <Filter>Source\GaslightGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GaslightGame\GaslightGamePlayerController.h">
+      <Filter>Source\GaslightGame</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GaslightGame\TargetComponent.cpp">
+      <Filter>Source\GaslightGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GaslightGame\TargetComponent.h">
+      <Filter>Source\GaslightGame</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
